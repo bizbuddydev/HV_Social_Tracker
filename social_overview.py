@@ -36,6 +36,7 @@ config = load_config()
 
 # Set env variables
 ACCOUNT_NAME = config["ACCOUNT_NAME"]
+PAGE_ID = config["PAGE_ID"]
 PROJECT_ID = config["PROJECT_ID"]
 DATASET_ID = config["DATASET_ID"]
 ACCOUNT_TABLE_ID = config["ACCOUNT_TABLE_ID"]
@@ -60,13 +61,13 @@ openai.api_key = st.secrets["openai"]["api_key"]
 AI_client = openai
 
 # Get Business Description
-def pull_busdescritpion(dataset_id, table_id):
+def pull_busdescritpion(dataset_id, table_id, page_id):
     
     # Build the table reference
     table_ref = f"{PROJECT_ID}.{dataset_id}.{table_id}"
 
     # Query to fetch all data from the table
-    query = f"SELECT `Description of Business and Instagram Goals` FROM `{table_ref}` LIMIT 1"
+    query = f"SELECT `description` FROM `{table_ref}` WHERE page_id = {page_id} LIMIT 1"
     
     try:
         # Execute the query
@@ -79,16 +80,16 @@ def pull_busdescritpion(dataset_id, table_id):
         st.error(f"Error fetching data: {e}")
         return None
 
-bus_description = pull_busdescritpion(ACCOUNT_DATASET_ID, BUSINESS_TABLE_ID)
+bus_description = pull_busdescritpion(ACCOUNT_DATASET_ID, BUSINESS_TABLE_ID, PAGE_ID)
 
 # Get Post Idea Data
-def pull_postideas(dataset_id, table_id):
+def pull_postideas(dataset_id, table_id, page_id):
     
     # Build the table reference
     table_ref = f"{PROJECT_ID}.{dataset_id}.{table_id}"
 
     # Query to fetch all data from the table
-    query = f"SELECT * FROM `{table_ref}` LIMIT 3"
+    query = f"SELECT * FROM `{table_ref}` WHERE page_id = {page_id} LIMIT 3"
     
     try:
         # Execute the query
