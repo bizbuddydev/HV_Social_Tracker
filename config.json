@@ -1,10 +1,10 @@
 {
-  "ACCOUNT_NAME": "Sterling Mental Performance",
+  "ACCOUNT_NAME": "The Harborview",
   "PROJECT_ID" : "bizbuddydemo-v1",
   "DATASET_ID": "ig_data",
   "ACCOUNT_DATASET_ID": "strategy_data",
-  "POST_TABLE_ID": "smp_postdata",
-  "ACCOUNT_TABLE_ID": "smp_igaccountdata",
-  "IDEAS_TABLE_ID" : "smp_postideas",
-  "BUSINESS_TABLE_ID" : "smp_businesscontext"
+  "POST_TABLE_ID": "hv_postdata",
+  "ACCOUNT_TABLE_ID": "hv_igaccountdata",
+  "IDEAS_TABLE_ID" : "postideas",
+  "BUSINESS_TABLE_ID" : "businesscontext"
 }
