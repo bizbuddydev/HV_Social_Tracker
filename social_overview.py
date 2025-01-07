@@ -477,7 +477,7 @@ def main():
         st.header("Upcoming Scheduled Posts")
         
         for index, row in post_ideas.iterrows():
-            with st.expander(f"{row['Date']}, {row['post_type']}: {row['caption'][:50]}..."):
+            with st.expander(f"{row['date']}, {row['post_type']}: {row['caption'][:50]}..."):
                 st.markdown(f"**Date:** {row['date']}")
                 st.markdown(f"**Caption:** {row['caption']}")
                 st.markdown(f"**Post Type:** {row['post_type']}")
