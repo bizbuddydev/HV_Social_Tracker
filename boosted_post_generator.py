@@ -52,7 +52,7 @@ if prompt := st.chat_input():
 
     # Send the full conversation history, including business context, to OpenAI
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         messages=st.session_state.messages
     )
     msg = response.choices[0].message.content
