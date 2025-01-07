@@ -43,7 +43,7 @@ ACCOUNT_TABLE_ID = config["ACCOUNT_TABLE_ID"]
 POST_TABLE_ID = config["POST_TABLE_ID"]
 ACCOUNT_DATASET_ID = config["ACCOUNT_DATASET_ID"]
 BUSINESS_TABLE_ID = config["BUSINESS_TABLE_ID"]
-IDEAS_TABLE_ID = config["IDEAS_TABLE_ID"]
+IDEAS_TABLE_ID = int(config["IDEAS_TABLE_ID"])
 
 
 # Load credentials and project ID from st.secrets
