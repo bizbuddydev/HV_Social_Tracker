@@ -89,7 +89,7 @@ def pull_postideas(dataset_id, table_id, page_id):
     table_ref = f"{PROJECT_ID}.{dataset_id}.{table_id}"
 
     # Query to fetch all data from the table
-    query = f"SELECT * FROM `{table_ref}` WHERE page_id = {page_id} LIMIT 3"
+    query = f"SELECT * FROM `{table_ref}` WHERE page_id = {page_id} ORDER BY date DESC LIMIT 3"
     
     try:
         # Execute the query
