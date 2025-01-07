@@ -31,6 +31,7 @@ config = load_config()
 
 # Set env variables
 ACCOUNT_NAME = config["ACCOUNT_NAME"]
+PAGE_ID = config["PAGE_ID"]
 PROJECT_ID = config["PROJECT_ID"]
 ACCOUNT_DATASET_ID = config["ACCOUNT_DATASET_ID"]
 IDEAS_TABLE_ID = config["IDEAS_TABLE_ID"]
@@ -182,6 +183,7 @@ def fetch_post_data():
     query = f"""
         SELECT date, caption, post_type, themes, tone, source
         FROM `{PROJECT_ID}.{ACCOUNT_DATASET_ID}.{IDEAS_TABLE_ID}`
+        WHERE page_id = {PAGE_ID}
         ORDER BY date ASC
     """
     query_job = bq_client.query(query)
