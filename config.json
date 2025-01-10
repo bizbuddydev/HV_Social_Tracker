@@ -7,5 +7,6 @@
   "POST_TABLE_ID": "hv_postdata",
   "ACCOUNT_TABLE_ID": "hv_igaccountdata",
   "IDEAS_TABLE_ID" : "postideas",
-  "BUSINESS_TABLE_ID" : "businesscontext"
+  "BUSINESS_TABLE_ID" : "businesscontext",
+  "SUMMARY_TABLE_ID" : "summarytable",
 }
