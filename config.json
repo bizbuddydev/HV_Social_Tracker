@@ -1,6 +1,6 @@
 {
   "ACCOUNT_NAME": "The Harborview",
-  "PAGE_ID" : 17841410640947509,
+  "PAGE_ID" : "17841410640947509",
   "PROJECT_ID" : "bizbuddydemo-v1",
   "DATASET_ID": "ig_data",
   "ACCOUNT_DATASET_ID": "strategy_data",
@@ -8,5 +8,5 @@
   "ACCOUNT_TABLE_ID": "hv_igaccountdata",
   "IDEAS_TABLE_ID" : "postideas",
   "BUSINESS_TABLE_ID" : "businesscontext",
-  "SUMMARY_TABLE_ID" : "summarytable",
+  "SUMMARY_TABLE_ID" : "summarytable"
 }
